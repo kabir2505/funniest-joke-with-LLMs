@@ -1,0 +1,16 @@
+[project]
+name = "funniest-joke-with-llms"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "groq>=0.26.0",
+    "pytest>=8.4.0",
+    "typing>=3.10.0.0",
+]
+
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
