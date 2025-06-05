@@ -17,7 +17,7 @@ I focused on three core challenges:
 Humor is **culturally grounded, often ambiguous**, and prone to surface-level mimicry. But that’s exactly what made it worth trying: if a model can handle something this fuzzy, it’s a strong testbed for general creative alignment.
 
 ---
-### 🧠 If You Had More Compute/Time, What Would You Have Done?
+###  If You Had More Compute/Time, What Would You Have Done?
 
 Given the tight schedule, including travel to campus and participation in a 2-day hackathon mid-project, I focused on building end-to-end prototypes of each module (generation, judging, novelty detection), prioritizing iteration speed over scale.
 
@@ -46,6 +46,11 @@ Right now, the Plan-and-Search joke generation module uses a simple template for
 - Train a dedicated **observation extractor**, fine-tuned to identify primitive ideas from real-world concepts using visual grounding or structured knowledge bases.
 - Diversify combinatorial logic — go beyond “AND” logic (A + B) to include temporal, causal, or analogical reasoning (“like A but for B”).
 - Introduce **persona-driven joke writers** (e.g., “write this as if Seinfeld noticed it,” or “make it sound like a stoner Twitter post”) to test humor-style transfer.
+
+
+### Explore and Experiment multiple different thresholds for novelty score calculations
+Due to time constraints, I was only able to experiment with a limited range of thresholds. In future iterations, I’d like to explore a wider variety, systematically evaluate their impact, and identify the most effective threshold for capturing meaningful novelty.
+
 
 
 ## Learnings
@@ -154,4 +159,3 @@ It would be a way to study **memetic dynamics** through the lens of LLMs.
 
 ---
 
-**In summary**, writing a full paper would mean grounding the current system with **human alignment signals**, extending it across cultures and styles, and opening a broader lens on **humor as a multi-modal, time-sensitive, value-laden phenomenon**. The core scaffolding is promising — but the space demands deeper rigor and richer data.

@@ -15,7 +15,14 @@ Plansearch and LLM as a Judge Implementation
 Refer to `output_eg.md`
 ---
 
-### Report
+### Report and Answers to questions
+```Why did you pick the particular project?
+If you had more compute/time, what would you have done?
+What did you learn in the project?
+What surprised you the most?
+If you had to write a paper on the project, what else needs to be done?
+```
+
 Refer to `Report.md`
 
 
@@ -23,11 +30,14 @@ Refer to `Report.md`
 use `uv`
 
 ```
-uv venv           # Create a virtual environment
-uv pip install -r requirements.txt  # Or use uv pip if you have a requirements file
-uv run python main.py               # Replace with your entry point
+uv venv           
+uv pip install -r pyproject.toml  
+uv run src/main.py            
 ```
+
+### Output example run of the whole pipeline
+Refer to `output_eg.md`
 
 ### Outputs for a joke context/word
 The above code runs the main file and generates an output based on the given context word
-Refer to `output_eg.md`
+Refer to `output_report.md`
