@@ -63,7 +63,7 @@ Please provide {num_observations} unique, funny, or surprising observations."""
         
         self.plansearch_completion_tokens+=response.usage.completion_tokens
         observations=response.choices[0].message.content.strip().split('\n')
-        print([obs.strip() for obs in observations])
+        # print([obs.strip() for obs in observations])
         return [obs.strip() for obs in observations]
 
 
@@ -111,7 +111,7 @@ Please provide {num_observations} unique, funny, or surprising observations."""
         
         self.plansearch_completion_tokens+=response.usage.completion_tokens
         observations=response.choices[0].message.content.strip().split('\n')
-        print([obs.strip() for obs in observations])
+        # print([obs.strip() for obs in observations])
         return [obs.strip() for obs in observations]
 
     
@@ -151,7 +151,7 @@ Please provide {num_observations} unique, funny, or surprising observations."""
         )                  
         
         self.plansearch_completion_tokens+=response.usage.completion_tokens
-        print(response.choices[0].message.content.strip())
+        # print(response.choices[0].message.content.strip())
         return response.choices[0].message.content.strip()
 
     
@@ -194,7 +194,7 @@ Now write the final joke. You will NOT return anything except for the joke insid
         )
         
         self.plansearch_completion_tokens +=response.usage.completion_tokens
-        print(response.choices[0].message.content.strip())
+        # print(response.choices[0].message.content.strip())
         
         return response.choices[0].message.content.strip()
 
@@ -229,7 +229,7 @@ Now write the final joke. You will NOT return anything except for the joke insid
         logger.info("Writing final joke")
         final_joke=self.implement_solution(context,joke_idea)
         
-        print('joke_idea,final_joke',joke_idea,final_joke)
+        # print('joke_idea,final_joke',joke_idea,final_joke)
         
         return joke_idea,final_joke
 

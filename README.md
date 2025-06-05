@@ -7,23 +7,27 @@ Plansearch and LLM as a Judge Implementation
 `Topic (e.g., "penguins", "VM") ➝ Premises / Observations ➝ Derived Punchline Ideas ➝ Joke Setup ➝ Full Joke`
 
 
-### solve vs solve_multiple
+## Overview
+![Plan Search for Jokes](pleansearch.png)
+![High Level Overview](overview.png)
 
-`solve`  
-- gives you one full pipeline result:
-    -  a unique joke idea (based on new observations)
-    - a joke written from that idea
-- The joke is based on freshly generated content every time it's called
+### Example Run 
+Refer to `output_eg.md`
+---
 
-
-- `solve_multiple()` is just a convinient, reusable helper to say:
-> Give me 5 different jokes about AI
-- it internally calls solve() n times
-- each time, it generates a *new idea* and joke from scratch
-- returns a list of only *final jokes*, not the joke ideas
-- Returns 3 unique jokes, each generated independently — not different versions of the same idea.
+### Report
+Refer to `Report.md`
 
 
+### Runs
+use `uv`
 
-### Running tests
-`uv run pytest -s`
+```
+uv venv           # Create a virtual environment
+uv pip install -r requirements.txt  # Or use uv pip if you have a requirements file
+uv run python main.py               # Replace with your entry point
+```
+
+### Outputs for a joke context/word
+The above code runs the main file and generates an output based on the given context word
+Refer to `output_eg.md`

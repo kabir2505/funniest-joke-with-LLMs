@@ -1,2 +1,8 @@
 info.txt
 .env
+__pycache__/
+*.py[cod]
+
+uv.lock
+
+vscode/

@@ -20,7 +20,23 @@ Joke: Why don't scientists trust atoms? Because they make up everything.
 Score: 8
 
 Joke: I told my wife she was drawing her eyebrows too high. She looked surprised.
-Score: 7"""
+Score: 7
+
+Joke: A horse walks into a bar. Bartender says, "Why the long face?"
+Score: 5
+
+Joke: What did the existential nihilist say? "Nothing matters. Especially this joke."
+Score: 4
+
+Joke: What's brown and sticky? A stick.
+Score: 6
+
+Joke: Knock knock. Who's there? Interrupting cow. Interrupting co—MOO!
+Score: 3
+
+Joke: My life is like a software update... always asking for more time.
+Score: 2
+"""
 
 class JokeJudge:
     def __init__(self,client):
