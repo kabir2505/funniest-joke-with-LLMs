@@ -11,6 +11,10 @@ Plansearch and LLM as a Judge Implementation
 ![Plan Search for Jokes](pleansearch.png)
 ![High Level Overview](overview.png)
 
+
+
+### ⭐️⭐️⭐️ Output of the input context word is saved in `output_report.md` !
+
 ### Example Run 
 Refer to `output_eg.md`
 ---
