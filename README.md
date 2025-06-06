@@ -15,6 +15,7 @@ Plansearch and LLM as a Judge Implementation
 Refer to `output_eg.md`
 ---
 
+
 ### Report and Answers to questions
 ```Why did you pick the particular project?
 If you had more compute/time, what would you have done?
@@ -25,9 +26,12 @@ If you had to write a paper on the project, what else needs to be done?
 
 Refer to `Report.md`
 
+### PlanSearch workflow
+Refer to `plasearch_workflow.md`
 
 ### Runs
 use `uv`
+Generate a `Groq api key` from `https://console.groq.com/keys`
 
 ```
 uv venv           
