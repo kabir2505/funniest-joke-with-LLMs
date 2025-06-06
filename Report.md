@@ -1,6 +1,6 @@
 
 
-### Why Did You Pick This Project?
+### Why Did You Pick This Project??
 
 I’ve always been fascinated by how people laugh at the unexpected, how a shift in perspective, a sudden incongruity, or even a playful misuse of logic can trigger something as human as laughter. Humor is one of the few areas where LLMs still struggle ,not due to grammar or syntax, but because of **intentional misdirection**, the “twist” that turns a statement into a joke.
 
