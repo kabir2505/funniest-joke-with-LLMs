@@ -12,6 +12,8 @@ Plansearch and LLM as a Judge Implementation
 ![High Level Overview](overview.png)
 
 
+### Detailed Report on methodology, experiments, learnings 
+Report link : https://docs.google.com/document/d/1K7TKCjaMitwuCzfkGIjF7hbwhZbpvKwfVJLiNF3JQiQ/edit?usp=sharing
 
 ### ⭐️⭐️⭐️ Output of the input context word is saved in `output_report.md` !
 
@@ -49,3 +51,7 @@ Refer to `output_eg.md`
 ### Outputs for a joke context/word
 The above code runs the main file and generates an output based on the given context word
 Refer to `output_report.md`
+
+
+---
+`llm_judge` few shot prompts referred from https://github.com/RajeshThevar/Joke-Classification-using-Machine-Learning-model/blob/master/JokeNonJokecollection/Collection

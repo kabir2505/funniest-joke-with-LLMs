@@ -82,26 +82,27 @@ class Novelty_Detect:
 
     def extract_acus_via_prompt(self,joke:str) -> dict:
         prompt = f"""
-You're a humor analyst.
-Given the following joke, identify and separate:
-- The **setup** : Background or context
-- The **punchline**: The twist or funny part
+        You're a humor analyst.
+        Given the following joke, identify and separate:
+        - The **setup** : Background or context
+        - The **punchline**: The twist or funny part
 
-Joke:
-{joke}
+        Joke:
+        {joke}
 
-Respond ONLY with valid JSON. Do not add any extra explanation, markdown, or commentary.
-Return exactly:
-{{
-    "setup": "<setup>",
-    "punchline": "<punchline>"
-}}
-"""
+        Respond only with a JSON object like:
+        {{
+        "setup": "...",
+        "punchline": "..."
+        }}
+        """
+
         
         response=self.client.chat.completions.create(
             model="gemma2-9b-it",
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.4
+            temperature=0.4,
+            response_format={"type": "json_object"}
             
         )
         
@@ -226,7 +227,15 @@ Return exactly:
             acus = self.extract_acus_via_prompt(new_joke)
             
             if acus is not None:
-                acus = json.loads(acus)
+               
+                if isinstance(acus, str) and acus.strip():
+                    acus = json.loads(acus)
+                elif isinstance(acus, dict):
+                    pass  # already a dict
+                else:
+                    print(f"Invalid 'acus' format for joke: {new_joke}")
+                    nova_results[new_joke] = {"nova_score": None, "is_novel": False}
+                    continue
                 print('acus here', acus)
                 setup = acus["setup"]
                 punchline = acus["punchline"]

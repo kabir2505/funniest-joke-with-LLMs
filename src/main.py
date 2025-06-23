@@ -71,11 +71,11 @@ def clean_joke_text(joke: str) -> str:
     joke = re.sub(r'\n+', '\n', joke)
     return joke
 
-topic=["elevator","node js locked in a VM"]
+topic=["penguins"]
 
 
 
-n=6 #number of jokes 
+n=4 #number of jokes 
 
 
 input_context=str(input("Please enter a context/idea to generate jokes from: "))
@@ -125,7 +125,7 @@ def write_markdown_report(jokes,top_jokes,baseline_nov,novelty_scores,file_path=
         clean_joke = joke.replace("```", "").strip()
         md_lines.append(f"### Joke {idx}\n")
         md_lines.append("```text\n" + clean_joke + "\n```\n")
-        md_lines.append(f"**Score**: `{score:.2f}`\n")
+        md_lines.append(f"**Score**: `{score}`\n")
     md_lines.append("---\n")
     
     

@@ -63,7 +63,7 @@ Please provide {num_observations} unique, funny, or surprising observations."""
         
         self.plansearch_completion_tokens+=response.usage.completion_tokens
         observations=response.choices[0].message.content.strip().split('\n')
-        # print([obs.strip() for obs in observations])
+        print([obs.strip() for obs in observations])
         return [obs.strip() for obs in observations]
 
 
@@ -232,7 +232,37 @@ Now write the final joke. You will NOT return anything except for the joke insid
         # print('joke_idea,final_joke',joke_idea,final_joke)
         
         return joke_idea,final_joke
+    
+    
 
+    
+    def solve_simple(self,context:str):
+        """
+        Simple solve method for generating a final joke based on a given context.
+        No plansearch is involved here.
+        """
+        prompt=f"""
+        You are a world-class stand-up comedian. You will be given a context and based on that you will write a short, hilarious joke that reflects the idea. 
+        One-liner, tweet-style, or short monologue is fine.
+        """
+        response=self.client.chat.completions.create(
+        model=self.model,
+        max_tokens=4096,
+        messages=[
+            {"role": "system", "content": self.system_prompt},
+            {"role": "user", "content": prompt}
+        ]
+    )
+        
+       
+        # print(response.choices[0].message.content.strip())
+        
+        return response.choices[0].message.content.strip()
+
+    
+
+        
+    
     
     def solve_multiple(self,context:str,n:int,num_initial_observations:int=3, num_derived_observations:int=2) -> List[str]:
         """
@@ -280,6 +310,7 @@ def plansearch(system_prompt:str,context:str,client,model:str,n:int=1) -> List[s
     return planner.solve_multiple(context,n), planner.plansearch_completion_tokens
 
         
+
 
 
 
